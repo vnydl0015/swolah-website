@@ -1,4 +1,4 @@
-
+<!-- flask_app/templates/index.html -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -318,40 +318,11 @@ p {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    border: 2px solid #ffffff;
-    color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
-/* .arrow-container {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    overflow: hidden;
-
-}
-.arrows {
-    display: flex;
-    animation: slide 10s linear infinite;
-
-}
-.arrow {
-    width: 270px;
-    height: 50px;
-    background-color: #c2b3a3;
-    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
-    margin-right: 10px;
-}
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(50%);
-    }
-} */
 
 .arrow-container {
     position: relative;
@@ -566,11 +537,11 @@ footer {
     text-decoration: underline;
 }
 
-.get-started-2{
+.get-started-2{ 
     text-align: right;
     margin-right: 100px;
     padding-bottom: 50px;
-
+    cursor: pointer;
 }
 
 @keyframes shakePause {
@@ -610,13 +581,46 @@ footer {
     animation: shakePause 2s ease-in-out infinite;
 }
 
+.text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
     </style>
     <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
 </head>
 
 <body>
-    <div class="top-banner">
-        <h2>GET TOKENS TO SWAP CLOTHES!<span style="margin-left: 500px;"></span>GET TOKENS TO SWAP CLOTHES!</h2>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+        </div>
     </div>
     <header>
         <nav class="container">
