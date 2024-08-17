@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0e8e0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #3c3230;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .search-bar {
+            background-color: #d9d0c7;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 5px;
+            border: none;
+            background-color: transparent;
+        }
+        .sidebar {
+            float: left;
+            width: 150px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            background-color: #d9d0c7;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #3c3230;
+        }
+        .main-content {
+            margin-left: 170px;
+            background-color: white;
+            padding: 20px;
+        }
+        h1 {
+            color: #3c3230;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #d9d0c7;
+        }
+        button {
+            background-color: #8c7b75;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Vector.png') }}" alt="swap_logo" width="62" height="47" style="margin-top: 70px; margin-left: 50px;">
+                <div class="logo-placeholder"></div>
+            </div>           
+             <div class="nav-links">
+                <a href="#">about us ▼</a>
+                <a href="#">login/signup ▼</a>
+                <a href="#">queries ▼</a>
+             
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="search...">
+        </div>
+        <div class="sidebar">
+
+            <a href="#">Details</a>
+            <a href="#">My Tokens</a>
+            <a href="#">More</a>
+            <a href="#">Settings</a>
+        </div>
+        <div class="main-content">
+            <h1>My Details</h1>
+            <h2>Personal Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" placeholder="enter...">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" placeholder="enter...">
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date Of Birth</label>
+                    <input type="text" id="dob" placeholder="enter...">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" placeholder="enter...">
+                </div>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
