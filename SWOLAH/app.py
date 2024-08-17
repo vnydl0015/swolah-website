@@ -18,6 +18,10 @@ def profile():
 @app.route('/preferences')
 def preferences():
     return render_template('preferences.html')
+
+@app.route('/process')
+def process():
+    return render_template('process.html')
 """
 @app.route('/help')
 def about():
