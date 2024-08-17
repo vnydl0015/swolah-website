@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
@@ -17,10 +18,16 @@
             padding: 20px;
         }
         header {
+            position: absolute;
+            left: 604px;
+            top: 73px;
+            width: 580px;
+            height: 46px;
             background-color: #3c2f2f;
             color: white;
             padding: 10px 0;
         }
+
         .logo {
             width: 30px;
             height: 30px;
@@ -46,7 +53,7 @@
             margin-left: 20px;
         }
         .login-box {
-            width: 300px;
+            width: 383px;
             margin: 100px auto;
             background-color: #f7f2ea;
             padding: 20px;
@@ -58,16 +65,19 @@
         }
         .login-box input[type="text"],
         .login-box input[type="password"] {
-            width: 100%;
+            width: 189px;
             padding: 10px;
             margin: 10px 0;
             border: none;
             background-color: #e0d6c9;
         }
+        
+
         .login-box input[type="submit"] {
-            width: 100%;
+            width: 79px;
+            height: 32px;
             padding: 10px;
-            background-color: #8b6b5d;
+            background-color: #9E745C;
             color: white;
             border: none;
             cursor: pointer;
@@ -91,6 +101,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -114,16 +125,18 @@
             <input type="submit" value="Enter">
         </form>
         <div class="social-login">
-            <p>or login with</p>
+            <p style="color: rgba(158, 116, 92, 0.7); font-family: 'Inter', sans-serif;">or login with</p>
             <a href="#">Instagram</a>
             <a href="#">Facebook</a>
             <a href="#">Twitter</a>
         </div>
-        <p>Not signed up? <a href="#">Make an account</a></p>
+        <p style="color: rgba(158, 116, 92, 0.7); font-family: 'Inter', sans-serif;">
+            Not signed up? Make an <a href="#" style="color: rgba(158, 116, 92, 0.7);"><b>account</b></a>
+        </p>        
     </div>
 
     <footer>
-        © Swiper. All rights reserved | Designed by Swiper team
+        © Swolah. All rights reserved | Designed by Swolah team
     </footer>
 </body>
 </html>
