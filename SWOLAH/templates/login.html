@@ -5,8 +5,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <style>
+
+html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+
+  }
+
+body {
+    background:  linear-gradient(to bottom, #F3EADB, #DFCCB6);/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #ffffff;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 5px 150px;
+    font-size: 10px;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
         .login-box {
             width: 383px;
             background-color: rgba(0, 0, 0, 0);;
@@ -101,26 +165,23 @@
 
 
 <body>
+    <div class="top-banner">
+        <h2>GET TOKENS TO SWAP CLOTHES!<span style="margin-left: 500px;"></span>GET TOKENS TO SWAP CLOTHES!</h2>
+    </div>
     <header>
-        <div class="container">
-            <h2>GET TOKENS TO SWAP CLOTHES!</h2>
-            <h2>GET TOKENS TO SWAP CLOTHES!</h2>
-        </div>
-        
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
     </header>
-    <nav>
-        <div class="logo">
-            <img src="{{ url_for('static', filename='Vector.png') }}" alt="swap_logo" >
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="menu">
-            <a href="#">about us</a>
-            <a href="#">system</a>
-            <a href="#">login/signup</a>
-        </div>
-    </nav>
+    
     <div class="container" style= "display: flex; justify-content: center; align-items: center;">
         <div class="login-box">
             <img src="{{ url_for('static', filename='login.png') }}">
