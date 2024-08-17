@@ -95,9 +95,9 @@
                 <div class="logo-placeholder"></div>
             </div>           
              <div class="nav-links">
-                <a href="{{ url_for('templates') }}">Home.html</a>
-                <a href="{{ url_for('templates') }}">signup.html</a>
-                <a href="{{ url_for('templates') }}">queries.html</a>
+                <a href="{{ url_for('templates', filename='home.html) }}">Home</a>
+                <a href="{{ url_for('templates', filename='signup.html) }}">Sign up</a>
+                <a href="{{ url_for('templates', filename='queries.html) }}">Queries</a>
                 <!--
                 <a href="/aboutus">about us ▼</a>
                 <a href="#">login/signup ▼</a>
@@ -111,10 +111,10 @@
             <input type="text" placeholder="search...">
         </div>
         <div class="sidebar">
-            <a href="{{ url_for('templates') }}">details.html</a>
-            <a href="{{ url_for('templates') }}">MyTokens.html</a>
-            <a href="{{ url_for('templates') }}">More.html</a>
-            <a href="{{ url_for('templates') }}">Settings.html</a>
+            <a href="{{ url_for('templates', filename='details.html) }}">Details</a>
+            <a href="{{ url_for('templates', filename='profile.html) }}">MyTokens</a>
+            <a href="{{ url_for('templates', filename='More.html) }}">More</a>
+            <a href="{{ url_for('templates', filename='settings.html) }}">Settings</a>
             <!--
             <a href="#">Details</a>
             <a href="#">My Tokens</a>
