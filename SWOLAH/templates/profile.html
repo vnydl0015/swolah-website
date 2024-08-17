@@ -95,9 +95,14 @@
                 <div class="logo-placeholder"></div>
             </div>           
              <div class="nav-links">
-                <a href="#">about us ▼</a>
+                <a href="{{ url_for('templates') }}">Home.html</a>
+                <a href="{{ url_for('templates') }}">signup.html</a>
+                <a href="{{ url_for('templates') }}">queries.html</a>
+                <!--
+                <a href="/aboutus">about us ▼</a>
                 <a href="#">login/signup ▼</a>
                 <a href="#">queries ▼</a>
+                -->
             </div>
         </nav>
     </header>
@@ -106,10 +111,16 @@
             <input type="text" placeholder="search...">
         </div>
         <div class="sidebar">
+            <a href="{{ url_for('templates') }}">details.html</a>
+            <a href="{{ url_for('templates') }}">MyTokens.html</a>
+            <a href="{{ url_for('templates') }}">More.html</a>
+            <a href="{{ url_for('templates') }}">Settings.html</a>
+            <!--
             <a href="#">Details</a>
             <a href="#">My Tokens</a>
             <a href="#">More</a>
             <a href="#">Settings</a>
+            -->
         </div>
         <div class="main-content">
             <h1>My Details</h1>
