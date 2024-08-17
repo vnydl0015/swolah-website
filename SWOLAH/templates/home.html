@@ -1,0 +1,203 @@
+<!-- flask_app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOLAH</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="top-banner">
+        <h2>GET TOKENS TO SWAP CLOTHES!<span style="margin-left: 500px;"></span>GET TOKENS TO SWAP CLOTHES!</h2>
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-logo">
+            <img src="{{ url_for('static', filename='main-logo.png') }}" >
+        </div>
+        
+        <div class="swap-container">
+            <div class="vertical-text left">return, recycle, reuse</div>
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='cloth1.png') }}" alt="cloth1">
+            </div>
+            <div class="swap-icon">
+                <img src="{{ url_for('static', filename='swap.png') }}">
+            </div>
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='cloth2.png') }}" alt="White t-shirt with print">
+            </div>
+            <div class="vertical-text right">for the planet</div>
+        </div>
+        
+        <div class="menu-icon">&#9776;</div>
+        <div class="get-started">
+            <img src="{{ url_for('static', filename='started.png') }} "style="width: 200px; height: auto;">
+        </div>
+    </main>
+
+
+
+    <div class="container2">
+        <div class="about-section">
+            <div class="image-container2">
+        
+                <img src="{{ url_for('static', filename='group.png') }}" class="group-photo">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            <div class="content">
+                
+                <div class="about"> 
+                    <img src="{{ url_for('static', filename='about.png') }}" >
+                    <img src="{{ url_for('static', filename='swap-white.png') }}" class="swap-white" >
+                </div>
+                
+                <p>In a world of fast fashion and mass consumption, Swolah aims to reduce this issue and bring about a new and exciting way to upgrade a person's style! Our service allows consumers to send in wearable clothes that they are not fond of any more in turn for a refreshing wardrobe.</p>
+                <a href="#" class="more-link">more about us ›</a>
+            </div>
+            
+        </div>
+        <div class="arrow-container">
+            <div class="arrows">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <!-- Repeat arrows to create a seamless animation -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <h1 style="text-align: center; color: #3c2f2f; font-size: 36px; letter-spacing: 10px;">
+            THE PROCESS
+        </h1>
+        <div class="process">
+            <div class="left-arrow"> 
+                <a href="#"><img src="{{ url_for('static', filename='left.png') }}"></a>
+            </div>
+            
+
+            <div class="step">
+                <div class="step1">
+                    <img src="{{ url_for('static', filename='1.png') }}">
+                </div>
+                <div class="step-label">1. eligibility ></div>
+            </div>
+
+            <div class="step">
+                <div class="step2">
+                    <img src="{{ url_for('static', filename='2.png') }}">
+                </div>
+                <div class="step-label">2. area ></div>
+            </div>
+
+            <div class="step">
+                <div class="step3">
+                    <img src="{{ url_for('static', filename='3.png') }}">
+                </div>
+                <div class="step-label">3. depost ></div>
+            </div>
+            <div class="step">
+                <div class="step4">
+                    <img src="{{ url_for('static', filename='4.png') }}">
+                </div>
+                <div class="step-label">4. swap ></div>
+            </div>
+            <div class="right-arrow">
+                <a href="#"><img src="{{ url_for('static', filename='right.png') }}"></a>
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <div class="container4">
+        <h2>step 1.</h2>
+        <p style="margin-bottom: 50px;">Send a pic of your clothes to see if it's <span class="highlight">eligible</span> for processing.</p>
+    
+        <h2>step 2.</h2>
+        <p style="margin-bottom: 50px;">Once checked and verified, insert <span class="highlight">postcode</span> to find the nearest bin to your location.</p>
+    
+        <h2>step 3.</h2>
+        <p style="margin-bottom: 50px;">Deposit clothing into the <span class="highlight">bin</span> and <span class="highlight">get tokens</span> for swapping.</p>
+    
+        <h2>step 4.</h2>
+        <p style="margin-bottom: 50px;">Use your tokens to <span class="highlight">purchase</span> mystery boxes!</p>
+    
+    </div>
+
+    <div class="get-started-2">
+        <img src="{{ url_for('static', filename='started.png') }} "style="width: 200px; height: auto;">
+    </div>
+    
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="#">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
+        </div>
+    </footer>
+</body>
+
+
+</html>
