@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swolah - Swap Clothes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 30px;
+            height: 30px;
+        }
+        .search-bar {
+            background-color: #d9cdc1;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .styles-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .style-list {
+            background-color: #d9cdc1;
+            padding: 10px;
+        }
+        .style-item {
+            background-color: #c1b5a7;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        .style-item::after {
+            content: '↗';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+        <!-- Header with navigation bar -->
+        <header>
+            <div class="container">
+                <h2>GET TOKENS TO SWAP CLOTHES!</h2>
+                <h2>GET TOKENS TO SWAP CLOTHES!</h2>
+            </div>
+            
+        </header>
+
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Vector.png') }}" alt="swap_logo" >
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="menu">
+                <a href="#">about us</a>
+                <a href="#">system</a>
+                <a href="#">login/signup</a>
+            </div>
+        </nav>
+    
+    <main class="container">
+        <h1>GET TOKENS TO SWAP CLOTHES!</h1>
+        <div class="styles-grid">
+            <div class="style-list">
+                <p>all styles</p>
+                <p>casual</p>
+                <p>street</p>
+                <p>sports</p>
+                <p>minimal</p>
+                <p>chic</p>
+                <p>formal</p>
+                <p>punk</p>
+                <p>country</p>
+                <p>preppy</p>
+                <p>more</p>
+            </div>
+            <div class="style-item">casual<br><small>more on casual ></small></div>
+            <div class="style-item">street<br><small>more on street ></small></div>
+            <div class="style-item">sports<br><small>more on sports ></small></div>
+            <div class="style-item">minimal<br><small>more on minimal ></small></div>
+            <div class="style-item">chic<br><small>more on chic ></small></div>
+            <div class="style-item">formal<br><small>more on formal ></small></div>
+            <div class="style-item">punk<br><small>more on punk ></small></div>
+            <div class="style-item">country<br><small>more on country ></small></div>
+            <div class="style-item">preppy<br><small>more on preppy ></small></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div>
+                <p>@swolah</p>
+                <p>000-000-000</p>
+                <p>swolah@gmail.com</p>
+            </div>
+            <div>
+                <h3>Our Services</h3>
+                <p>Manual</p>
+                <p>Instructional Video</p>
+                <p>Into the System</p>
+            </div>
+            <div>
+                <h3>Return Policy</h3>
+                <p>Refunds</p>
+                <p>Returning and Keeping</p>
+                <p>Problems</p>
+            </div>
+            <div>
+                <h3>Help</h3>
+                <p>Contact</p>
+                <p>Enquiry</p>
+                <p>Call</p>
+            </div>
+        </div>
+        <div class="container">
+            <p>© Swolah. All rights reserved. | Designed by Swolah team.</p>
+        </div>
+    </footer>
+</body>
+</html>
