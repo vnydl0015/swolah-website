@@ -3,278 +3,388 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swap Clothes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #3e3e3e;
-        }
+    <title>SWAP! - Get Tokens to Swap Clothes</title>
+    <style> 
+    /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6e0;
+    color: #4a3728;
+} */
 
-        header {
-            background-color: #f7e9d5;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
+/*****HEADER**************/
+html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+    
+  }
 
-        .header-container {
+body {
+    background-color:  #F3EADB;/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #f0e6d9;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 0 150px;
+    font-size: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/****************************/
+
+
+
+/****FOOTER**********/
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.services, .return-policy, .help {
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+}
+
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:17px;
+}
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-list li {
+    margin-bottom: 5px;
+    
+}
+.footer-list a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8b7b6b;
+}
+.progress-bar {
+    width: 20px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin-top: 1rem; /* Space between images and button */
+    padding-bottom: 20px;
+}
+
+.next-button {
+    background-color: #b19b87;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 40px;
+    
+}
+
+.text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
+
+
+
+
+/**
+
+ADD CODE HERE FOR CSS
+
+**/
+
+
+        .container2 {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f5f0e8;
+            border-radius: 10px;
+            overflow: hidden;
         }
 
-        .logo img {
-            height: 40px;
-        }
 
-        .header-right {
-            display: flex;
-            align-items: center;
-        }
+        .sidebar {
+            width: 190px;
 
-        .search-bar input[type="text"] {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-bar button {
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #3e3e3e;
-        }
-
-        main {
-            display: flex;
-        }
-
-        aside {
-            width: 15%;
-            background-color: #ede3d1;
             padding: 20px;
         }
 
-        aside ul {
+        .sidebar p {
+            margin-top: 0;
+            border-bottom: 1px solid #3c2f2f;
+            padding-bottom: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #000000; /* Ensure text is readable */
+            background-image: url('static/behind.png'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Avoid repeating the image */
+            padding: 10px; /* Adjust padding as needed */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
+        .sidebar ul {
             list-style-type: none;
             padding: 0;
         }
-
-        aside ul li {
-            margin: 10px 0;
-        }
-
-        aside ul li a {
-            text-decoration: none;
-            color: #3e3e3e;
-        }
-
-        .main-content {
-            width: 85%;
-            padding: 30px;
-            background-color: #CAB09B;
-            text-align: left;
-            
-        }
-
-        .main-content h1 {
-            font-size: 28px;
-            color: #3e3e3e;
-        }
-
-        .main-content p {
-            font-size: 16px;
-            color: #3e3e3e60;
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .action-button {
-            width: 100px;
-            margin: 100px;
-            text-align: center;
-        }
-
-        .action-button img {
-            width: 200px;
-            height: 260px;
+        .sidebar li {
             margin-bottom: 10px;
         }
-
+    
+        .main-content {
+            flex-grow: 1;
+            padding: 40px;
+            position: relative;
+            margin-left: 0px;
+        }
+        h1 {
+            color: #4a4a4a;
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #4a4a4a;
+            font-weight: normal;
+            text-align: center;
+            font-size: 20px;
+        }
+        h3 {
+            color: #4a4a4a;
+            font-weight: normal;
+            font-size: 30px;
+        }
         .token-balance {
             position: absolute;
-            top: 100px; /* Position the element 10px from the top of the page */
-            right: 0;  /* Align it to the right of the page */
+            top: 20px;
+            right: 20px;
+            background-color: #b3a18e;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        .options {
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
+            justify-content: space-around;
+            margin-top: 40px;
         }
-
-        .token-count {
-            top: 50px;
-            display: flex;
-            align-items: center;
-            margin-left: 10px;
-        }
-
-        .token-count img {
-            width: 150px;
-            height: 50px;
-            margin-right: 5px;
-        }
-
-        footer {
-            background-color: #f7e9d5;
-            padding: 20px;
-            border-top: 1px solid #ccc;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            padding-bottom: 10px;
-        }
-
-        .social-media {
-            flex: 1;
-            padding-right: 20px;
-        }
-
-        .footer-links {
-            flex: 3;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .footer-links div {
-            margin: 0 20px;
-        }
-
-        .footer-links h3 {
-            margin-bottom: 10px;
-            color: #3e3e3e;
-        }
-
-        .footer-links p {
-            margin: 5px 0;
-            color: #3e3e3e;
-        }
-
-        .footer-image {
+        .option {
+            background-color: white;
+            border-radius: 0px;
+            padding: 4px;
             text-align: center;
+            width: 45%;
+        }
+        .option img {
+            width: 50%;
+            height: auto;
+            margin-bottom: 10px;
         }
 
-        .footer-image img {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+
+</style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="{{ url_for('static', filename='Vector.png') }}" alt="Logo">
-            </div>
-            <div class="header-right">
-                <div class="search-bar">
-                    <input type="text" placeholder="search...">
-                    <button type="submit">🔍</button>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">login/signup</a></li>
-                        <li><a href="#">queries</a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
         </div>
-
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
     </header>
+        
 
-    <main>
-        <aside>
+
+
+
+ <!-- ADD CODE HERE FOR HTML -->
+ <div class="container2">
+    <div class="container-content">
+        <aside class="sidebar">
+            <p>home</p>
             <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">manage</a></li>
-                <li><a href="#">preferences</a></li>
-                <li><a href="#">orders</a></li>
-                <li><a href="#">help</a></li>
-                <li><a href="#">log out</a></li>
+                
+                <li>manage</li>
+                <li>preferences</li>
+                <li>orders</li>
+                <li>help</li>
+                <li>log out</li>
             </ul>
         </aside>
+     </div>
 
-        <section class="main-content">
-            <h1>Welcome back, Sabrina Carpenter!</h1>
-            <p>What would you like to do today?</p>
-            <div class="action-buttons">
-                <div class="action-button">
-                    <img src="{{ url_for('static', filename='exchange_clothes_for_tokens.png') }}" alt="Exchange clothes">
-                </div>
-                <div class="action-button">
-                    <img src="{{ url_for('static', filename='purchase_clothes.png') }}" alt="Purchase clothes">
-                </div>
+    <div class="main-content">
+        <div class="token-balance">Your token balance is : 48</div>
+        <h1>Welcome back,</h1>
+        <h3>Sabrina Carpenter !</h3>
+        <h2>What would you like to do today ?</h2>
+        <div class="options">
+            <div class="option">
+                <img src="{{ url_for('static', filename='Group 79.png') }}" alt="Exchange clothes icon">
             </div>
-            <div class="token-balance">
-                <div class="token-count">
-                    <img src="{{ url_for('static', filename='token_balance.png') }}" alt="Token">
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="social-media">
-                <p>@swaish</p>
-                <p>000-000-000</p>
-                <p>swaish@gmail.com</p>
-            </div>
-            <div class="footer-links">
-                <div>
-                    <h3>Our Services</h3>
-                    <p>Manual</p>
-                    <p>Instructional Video</p>
-                    <p>Into the System</p>
-                </div>
-                <div>
-                    <h3>Return Policy</h3>
-                    <p>Refunds</p>
-                    <p>Returning and Keeping</p>
-                    <p>Problems</p>
-                </div>
-                <div>
-                    <h3>Help</h3>
-                    <p>Contact</p>
-                    <p>Enquiry</p>
-                    <p>Call</p>
-                </div>
+            <div class="option">
+                <img src="{{ url_for('static', filename='Group 80.png') }}" alt="Purchase clothes icon">
             </div>
         </div>
-        <div class="footer-image">
-            <img src="{{ url_for('static', filename='footer_background.png') }}">
+    </div>
+</div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="#">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
         </div>
     </footer>
 </body>
