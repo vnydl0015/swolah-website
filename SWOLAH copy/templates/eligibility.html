@@ -1,0 +1,128 @@
+<!-- flask_app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOLAH</title>
+    <link rel="stylesheet" href="static/styles v2.css">
+</head>
+<body>
+    <!-- Header with navigation bar -->
+    <header>
+        <div class="text-slider">
+            <div class="text-track">
+                <span>GET TOKENS TO SWAP CLOTHES!</span>
+                <span>GET TOKENS TO SWAP CLOTHES!</span>
+                <span>GET TOKENS TO SWAP CLOTHES!</span>
+                <span>GET TOKENS TO SWAP CLOTHES!</span>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Main content -->
+    <!-- <body> -->
+    <nav style="
+    position: relative;
+    z-index: 2;">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='Vector.png') }}" alt="swap_logo" >
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="menu">
+            <a href="#">about us</a>
+            <a href="#">system</a>
+            <a href="#">login/signup</a>
+        </div>
+
+       
+    </nav>
+    <div class="swap-text">SWAP!</div>
+    <div class="title-section"></div>
+    
+    <div class="lower-nav">
+        <a href="#" class="tab active">eligibility</a>
+        <a href="#" class="tab">instructions</a>
+        <a href="#" class="tab">drop off</a>
+        <div class="triangle-equilateral"></div>
+
+    </div>
+    
+    <div class="eligibility-header">Eligibility</div>
+
+    <div class="container">
+        <div class="left-text">
+            <div class="eligibility-photo">
+                <img src="{{ url_for('static', filename='photo sketch.png') }}" alt="eligible clothes" >
+            </div>
+            <div class="text-container">
+                <p>To ensure the eligibility of your clothes, we require you to take photos of your clothes and send to us for evaluation. Wait times vary from 1-4 business days!</p>
+            </div>
+        </div>
+        <div class="right-text">
+            <div class="dropzone" id="dropzone">
+                <img src="{{ url_for('static', filename='drag-and-drop 1.png') }}" alt="drag and drop">
+                <p><b>Drag & Drop</b> an image here or <b style="font-weight: bolder;">browse file</b> to upload your image (max 2MB)</p>
+                <img id="image-preview" alt="Image Preview" style="display: none;">
+
+            </div>
+            <input type="file" id="file-input" accept="image/*" style="display: none;">
+            <div class="button-container">
+                <a href="dropoff"><button class="next-button">Next</button></a>
+            </div>
+            
+        </div>
+        
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="#">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
+        </div>
+    </footer>
+</body>
+<!-- </body> -->
+
+
+</html>

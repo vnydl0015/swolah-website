@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAP! - Get Tokens to Swap Clothes</title>
+    <style> 
+    /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6e0;
+    color: #4a3728;
+} */
+
+/*****HEADER**************/
+html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+    
+  }
+
+body {
+    background-color:  #F3EADB;/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #f0e6d9;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 0 150px;
+    font-size: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/****************************/
+
+
+
+/****FOOTER**********/
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.services, .return-policy, .help {
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+}
+
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:17px;
+}
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-list li {
+    margin-bottom: 5px;
+    
+}
+.footer-list a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8b7b6b;
+}
+.progress-bar {
+    width: 20px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin-top: 1rem; /* Space between images and button */
+    padding-bottom: 20px;
+}
+
+.next-button {
+    background-color: #b19b87;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 40px;
+    
+}
+
+.text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
+
+
+
+
+/**
+
+ADD CODE HERE FOR CSS
+
+**/
+
+
+        .container2 {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #f5f0e8;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+
+        .sidebar {
+            width: 190px;
+
+            padding: 20px;
+        }
+
+        .sidebar p {
+            margin-top: 0;
+            border-bottom: 1px solid #3c2f2f;
+            padding-bottom: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #000000; /* Ensure text is readable */
+            background-image: url('static/behind.png'); /* Set the background image */
+            background-size: cover; /* Ensure the image covers the background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Avoid repeating the image */
+            padding: 10px; /* Adjust padding as needed */
+            box-sizing: border-box; /* Include padding in the element's total width and height */
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+    
+        .main-content {
+            flex-grow: 1;
+            padding: 40px;
+            position: relative;
+            margin-left: 0px;
+        }
+        h1 {
+            color: #4a4a4a;
+            font-size: 2.5em;
+            margin-bottom: 0;
+        }
+        h2 {
+            color: #4a4a4a;
+            font-weight: normal;
+            text-align: center;
+            font-size: 20px;
+        }
+        h3 {
+            color: #4a4a4a;
+            font-weight: normal;
+            font-size: 30px;
+        }
+        .token-balance {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #b3a18e;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+        .option {
+            background-color: white;
+            border-radius: 0px;
+            padding: 4px;
+            text-align: center;
+            width: 45%;
+        }
+        .option img {
+            width: 50%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+
+</style>
+</head>
+<body>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
+    </header>
+        
+
+
+
+
+ <!-- ADD CODE HERE FOR HTML -->
+ <div class="container2">
+    <div class="container-content">
+        <aside class="sidebar">
+            <p>home</p>
+            <ul>
+                
+                <a href="preferences"><li>manage</li></a>
+                <a href="preferences"><li>preferences</li></a>
+                <a href="preferences"><li>orders</li></a>
+                <a href="preferences"><li>help</li></a>
+                <a href="preferences"><li>log out</li></a>
+            </ul>
+        </aside>
+     </div>
+
+    <div class="main-content">
+        <div class="token-balance">Your token balance is : 48</div>
+        <h1>Welcome back,</h1>
+        <h3>Sabrina Carpenter !</h3>
+        <h2>What would you like to do today ?</h2>
+        <div class="options">
+            <div class="option">
+                <a href="eligibility"><img src="{{ url_for('static', filename='Group 79.png') }}" alt="Exchange clothes icon"></a>
+            </div>
+            <div class="option">
+                <a href="buy"><img src="{{ url_for('static', filename='Group 80.png') }}" alt="Purchase clothes icon"></a>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="#">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
+        </div>
+    </footer>
+</body>
+</html>

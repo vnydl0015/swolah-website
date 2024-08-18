@@ -1,0 +1,876 @@
+<!-- flask_app/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOLAH</title>
+
+    <style>
+    
+    html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+    
+  }
+
+body {
+    background-color:  #F3EADB;/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #f0e6d9;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 0 150px;
+    font-size: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #e0d6c9;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.search-container {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-container button {
+  padding: 8px 12px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #444;
+}
+
+.get-started {
+    cursor: pointer;
+    
+}
+
+.get-started-2 {
+    text-align: right;
+
+}
+.get-started:hover {
+    background-color: #50382a00; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.get-started:active {
+    background-color: #382921; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+h2.container span {
+    margin-right: 20px; /* Adjust this value to set spacing between sentences */
+}
+
+  
+
+  
+  footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #ddd;
+    align-items: center;
+    
+  }
+
+ 
+
+
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Adjust padding if needed */
+    margin: 0 50px;
+}
+.search-bar {
+    flex-grow: 2; /* Allows the search bar to grow relative to other items */
+    margin: 0 20px;
+    min-width: 300px;
+}
+.search-bar input {
+    padding: 5px;
+    width: 200px;
+}
+
+.menu {
+    background-color: #463227;
+    height: 30px;
+}
+
+.menu a {
+    margin-left: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 30px 30px 30px 30px;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+    background-color: #CAB09B;
+    z-index: 2;
+    position: relative;
+}
+
+.main-logo, .swap-container, .get-started, .menu-icon {
+    position: relative;
+    z-index: 3; /* Ensure these elements are above the main content and background */
+}
+
+.get-started:hover {
+    background-color: #50382a00; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.get-started:active {
+    background-color: #38292100; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+
+.get-started-2:hover {
+    background-color: #50382a00; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.get-started-2:active {
+    background-color: #38292100; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.subtitle {
+    color: #59453c;
+    margin-bottom: 20px;
+}
+
+.main-logo img {
+    margin-left: 190px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.swap-container {
+    display: flex;
+    justify-content: center;
+    align-items: right;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.vertical-text.left {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.vertical-text.right {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 10px;
+  color: #ffffff;
+}
+
+
+.product-image img {
+    width: 200px;
+    height: auto;
+}
+
+.swap-icon img {
+  max-width: 200px; 
+  height: auto;
+  margin-top: 20px; 
+  float: left;
+
+}
+
+.menu-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 50px;
+    color: #9E745C;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo img {
+    display: flex;
+    width: 62px; /* Correct syntax for width */
+    height: 47px; /* Correct syntax for height */
+    margin-left: 0px;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.image-container2 {
+    width: 45%;
+    position: relative;
+}
+
+.group-photo {
+    position: relative;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-top:40px;
+    z-index: 2;
+}
+.shape {
+    position: absolute;
+    z-index: -1;
+}
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: -20px;
+    left: -20px;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+.shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    right: -50px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+.content {
+    margin-top:-20px;
+    width: 50%;
+}
+h1 {
+    font-size: 48px;
+    color: #3c2f2f;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3c2f2f;
+}
+.more-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.arrow-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    overflow: hidden;
+    white-space: nowrap; /* Prevents arrows from wrapping */
+}
+
+.arrows {
+    display: inline-flex; /* Allows arrows to align horizontally */
+    animation: slide 10s linear infinite;
+}
+
+.arrow {
+    width: 270px;
+    height: 50px;
+    background-color: #c2b3a3;
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevents arrows from shrinking */
+}
+
+/* Keyframes for sliding effect */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.about {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Vertically center items */
+    position: relative; /* For absolute positioning of .swap-white if needed */
+}
+
+.about img {
+    max-width: 100%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+}
+.swap-white {
+    margin-left: -10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #3c2f2f;
+    font-size: 36px;
+    margin-bottom: 40px;
+    margin-top: 70px;
+}
+.process {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+.step {
+    text-align: center;
+    width: 22%;
+}
+.step-image {
+    width: 100%;
+    height: 150px;
+    border: 2px solid #8b7b6b;
+    margin-bottom: 10px;
+}
+.step-label {
+    font-size: 17px;
+    color: #9f856b;
+ 
+}
+
+
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.services, .return-policy, .help {
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+}
+
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:17px;
+}
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-list li {
+    margin-bottom: 5px;
+    
+}
+.footer-list a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8b7b6b;
+}
+
+.right-arrow img {
+    transition: box-shadow 0.3s ease;
+}
+.right-arrow img:hover {
+    background-color: #afaeae;
+  }
+
+  .left-arrow img {
+    transition: box-shadow 0.3s ease;
+}
+.left-arrow img:hover {
+    background-color: #afaeae;
+  }
+
+.instagram {
+    float: left; 
+    margin-left:20px;
+    margin-right: 10px;
+    margin-top:4px;
+}
+
+.telephone {
+    float: left; 
+    margin-left:20px;
+    margin-right: 10px;
+    margin-top:4px;
+}
+
+.mail {
+    float: left; 
+    margin-left:20px;
+    margin-right: 10px;
+    margin-top:4px;
+}
+
+
+
+
+.container4 {
+    width: 80%;
+    max-width: 600px;
+    margin-left: 400px;
+    text-align: center;
+}
+.container4 h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.container4 p {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+.highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.get-started-2{ 
+    text-align: right;
+    margin-right: 100px;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+
+.background-image {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1; /* Send it to the back */
+    overflow: hidden; /* Ensure it doesn't overflow the container */
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+@keyframes shakePause {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-10px);
+    }
+    20% {
+        transform: translateX(10px);
+    }
+    30% {
+        transform: translateX(-10px);
+    }
+    40% {
+        transform: translateX(10px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    60% {
+        transform: translateX(-10px);
+    }
+    70% {
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    90% {
+        transform: translateX(10px);
+    }
+}
+
+.shake-pause {
+    animation: shakePause 2s ease-in-out infinite;
+}
+
+.text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
+    </style>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+</head>
+
+<body>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="login">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="background-image">
+            <img src="{{ url_for('static', filename='new_landing_page_background.png') }}" alt="Background">
+        </div>        
+        <div class="main-logo">
+            <img src="{{ url_for('static', filename='main-logo.png') }}" >
+        </div>
+        
+        <div class="swap-container">
+            <div class="vertical-text left">return, recycle, reuse</div>
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='new_clothes1.png') }}" alt="cloth1">
+            </div>
+            <div class="swap-icon">
+                <img src="{{ url_for('static', filename='brown_sharp_arrows_logo_new_cut_2.png') }}"class="shake-pause">
+            </div>
+            <div class="product-image">
+                <img src="{{ url_for('static', filename='new_clothes.png') }}" alt="White t-shirt with print">
+            </div>
+            <div class="vertical-text right">for the planet</div>
+        </div>
+        
+        <div class="menu-icon">&#9776;</div>
+        <div class="get-started">
+            <a href="login">
+            <img src="{{ url_for('static', filename='Component 1.png') }} "style="width: 200px; height: auto;">
+            </a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div class="container2">
+        <div class="about-section">
+            <div class="image-container2">
+        
+                <img src="{{ url_for('static', filename='group.png') }}" class="group-photo">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+            </div>
+            <div class="content">
+                
+                <div class="about"> 
+                    <img src="{{ url_for('static', filename='about.png') }}" >
+                    <img src="{{ url_for('static', filename='swap-white.png') }}" class="swap-white" >
+                </div>
+                
+                <p>In a world of fast fashion and mass consumption, Swolah aims to reduce this issue and bring about a new and exciting way to upgrade a person's style! Our service allows consumers to send in wearable clothes that they are not fond of any more in turn for a refreshing wardrobe.</p>
+                <a href="#" class="more-link">more about us ›</a>
+            </div>
+            
+        </div>
+        <div class="arrow-container">
+            <div class="arrows">
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <div class="arrow"></div>
+                <!-- Repeat arrows to create a seamless animation -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container3">
+        <h1 style="text-align: center; color: #3c2f2f; font-size: 36px; letter-spacing: 10px;">
+            THE PROCESS
+        </h1>
+        <div class="process">
+            <div class="left-arrow"> 
+                <a href="#"><img src="{{ url_for('static', filename='left.png') }}"></a>
+            </div>
+            
+
+            <div class="step">
+                <div class="step1">
+                    <img src="{{ url_for('static', filename='1.png') }}">
+                </div>
+                <div class="step-label">1. eligibility ></div>
+            </div>
+
+            <div class="step">
+                <div class="step2">
+                    <img src="{{ url_for('static', filename='2.png') }}">
+                </div>
+                <div class="step-label">2. area ></div>
+            </div>
+
+            <div class="step">
+                <div class="step3">
+                    <img src="{{ url_for('static', filename='3.png') }}">
+                </div>
+                <div class="step-label">3. depost ></div>
+            </div>
+            <div class="step">
+                <div class="step4">
+                    <img src="{{ url_for('static', filename='4.png') }}">
+                </div>
+                <div class="step-label">4. swap ></div>
+            </div>
+            <div class="right-arrow">
+                <a href="#"><img src="{{ url_for('static', filename='right.png') }}"></a>
+            </div>
+            
+
+        </div>
+        
+    </div>
+
+    <div class="container4">
+        <h2>step 1.</h2>
+        <p style="margin-bottom: 50px;">Send a pic of your clothes to see if it's <span class="highlight">eligible</span> for processing.</p>
+    
+        <h2>step 2.</h2>
+        <p style="margin-bottom: 50px;">Once checked and verified, insert <span class="highlight">postcode</span> to find the nearest bin to your location.</p>
+    
+        <h2>step 3.</h2>
+        <p style="margin-bottom: 50px;">Deposit clothing into the <span class="highlight">bin</span> and <span class="highlight">get tokens</span> for swapping.</p>
+    
+        <h2>step 4.</h2>
+        <p style="margin-bottom: 50px;">Use your tokens to <span class="highlight">purchase</span> mystery boxes!</p>
+    
+    </div>
+
+    <div class="get-started-2">
+        <a href="login">
+        <img src="{{ url_for('static', filename='started.png') }} "style="width: 200px; height: auto;">
+        </a>
+    </div>
+    
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="process">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
+        </div>
+    </footer>
+</body>
+
+
+</html>
