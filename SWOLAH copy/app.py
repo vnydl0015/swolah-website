@@ -23,10 +23,9 @@ def preferences():
 def buy():
     return render_template('buy.html')
 
-
-@app.route('/account_page')
+@app.route('/account')
 def account_page():
-    return render_template('account_page.html')
+    return render_template('account.html')
 
 
 @app.route('/eligibility')
