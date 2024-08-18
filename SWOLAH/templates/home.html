@@ -167,8 +167,13 @@ main {
     text-align: center;
     padding: 20px;
     background-color: #CAB09B;
-
+    z-index: 2;
     position: relative;
+}
+
+.main-logo, .swap-container, .get-started, .menu-icon {
+    position: relative;
+    z-index: 3; /* Ensure these elements are above the main content and background */
 }
 
 h1 {
@@ -545,6 +550,22 @@ footer {
     cursor: pointer;
 }
 
+.background-image {
+    position: absolute;
+    top: 111px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Send it to the back */
+    overflow: hidden; /* Ensure it doesn't overflow the container */
+}
+
+.background-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
 @keyframes shakePause {
     0%, 100% {
         transform: translateX(0);
@@ -631,14 +652,16 @@ footer {
             </div>
             <div class="nav-links">
                 <a href="#">about us</a>
-                <a href="#">login/signup</a>
+                <a href="login">login/signup</a>
                 <a href="#">queries</a>
             </div>
         </nav>
     </header>
 
     <main>
-
+        <div class="background-image">
+            <img src="{{ url_for('static', filename='landing_page_background.png') }}" alt="Background">
+        </div>        
         <div class="main-logo">
             <img src="{{ url_for('static', filename='main-logo.png') }}" >
         </div>
@@ -652,14 +675,17 @@ footer {
                 <img src="{{ url_for('static', filename='swap.png') }}"class="shake-pause">
             </div>
             <div class="product-image">
-                <img src="{{ url_for('static', filename='cloth2.png') }}" alt="White t-shirt with print">
+                <img src="{{ url_for('static', filename='new_clothes.png') }}" alt="White t-shirt with print">
             </div>
             <div class="vertical-text right">for the planet</div>
         </div>
         
         <div class="menu-icon">&#9776;</div>
         <div class="get-started">
+            <a href="login">
             <img src="{{ url_for('static', filename='started.png') }} "style="width: 200px; height: auto;">
+            </a>
+            </div>
         </div>
     </main>
 
@@ -761,7 +787,9 @@ footer {
     </div>
 
     <div class="get-started-2">
+        <a href="login">
         <img src="{{ url_for('static', filename='started.png') }} "style="width: 200px; height: auto;">
+        </a>
     </div>
     
 
@@ -782,7 +810,7 @@ footer {
             <div class="services">
                 <div class="footer-heading">Our Services</div>
                 <ul class="footer-list">
-                    <li><a href="#">Manual ></a></li>
+                    <li><a href="process">Manual ></a></li>
                     <li><a href="#">Instructional Video ></a></li>
                     <li><a href="#">Into the System ></a></li>
                 </ul>
