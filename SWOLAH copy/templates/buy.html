@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Mystery Box</title>
+    <style> 
+    /* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e6e0;
+    color: #4a3728;
+} */
+
+/*****HEADER**************/
+html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+    
+  }
+
+body {
+    background-color:  #F3EADB;/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #f0e6d9;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 0 150px;
+    font-size: 10px;
+    justify-content: space-between;
+    margin-left: 50px;
+    
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+/****************************/
+
+
+
+/****FOOTER**********/
+footer {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.contact-info {
+    flex: 1;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.services, .return-policy, .help {
+    flex: 1;
+    text-align: center;
+    margin-left: 100px;
+}
+
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size:17px;
+}
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-list li {
+    margin-bottom: 5px;
+    
+}
+.footer-list a {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #8b7b6b;
+}
+.progress-bar {
+    width: 20px;
+    height: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin-top: 1rem; /* Space between images and button */
+    padding-bottom: 20px;
+}
+
+.next-button {
+    background-color: #b19b87;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 40px;
+    
+}
+
+.text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
+
+
+
+
+/**
+
+ADD CODE HERE FOR CSS
+
+**/
+
+        
+        h1 {
+            color: #4a4a4a;
+            border-bottom: 1px solid #4a4a4a;
+            padding-bottom: 10px;
+        }
+        .product {
+            display: flex;
+            margin-top: 20px;
+        }
+        .product-image {
+            flex: 1;
+        
+            padding: 20px;
+        }
+        .box {
+            margin-left: 50px;
+        }
+        .product-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+        
+        h2 {
+            color: #4a4a4a;
+            margin-top: 0;
+        }
+        .price {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #b3a18e;
+            background-color: #f5f0e8;
+            cursor: pointer;
+        }
+        .bulk-buy {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .bulk-buy button {
+            width: 30%;
+        }
+        .buy-button {
+            background-color: #9E745C;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .token-balance {
+            float: right;
+            background-color: #b3a18e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+
+        .options:hover {
+    background-color: #50382a; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.options:active {
+    background-color: #382921; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+
+.buy-button:hover {
+    background-color: #50382a; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.buy-button:active {
+    background-color: #382921; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+
+    </style>
+
+
+</style>
+</head>
+<body>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
+    </header>
+        
+
+
+
+
+ <!-- ADD CODE HERE FOR HTML -->
+ <div class="container2">
+    <h1>Our Products</h1>
+    <div class="token-balance">Your token balance is: 48</div>
+    <div class="product">
+        <div class="product-image">
+            <div class="box">
+                <img src="{{ url_for('static', filename='mystery box 1.png') }}">
+            </div>
+        </div>
+        <div class="product-details">
+            <h2 style="font-size: 30px; color: #463227;">Mystery Box</h2>
+            <p class="price" style="font-weight: bold; font-size: 30px; color: #463227;">2 tokens</p>
+
+            <p style="font-size: 14px">buy now, pay later</p>
+            <select>
+                <option>Amount: 1 Item</option>
+            </select>
+            <p>bulk buy</p>
+            <div class="bulk-buy">
+                <button class="options">1kg of clothing</button>
+                <button class="options">2kg of clothing</button>
+                <button class="options">3kg of clothing</button>
+            </div>
+            <button class="buy-button">Buy</button>
+        </div>
+    </div>
+</div>
+
+    
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="footer-heading"></div>
+                <ul class="footer-list">
+                    <a href="#"><img src="{{ url_for('static', filename='instagram.png') }}" class="instagram"></a>
+                    <li>@swolah</li>
+                    <a href="#"><img src="{{ url_for('static', filename='telephone.png') }}" class="telephone"></a>
+                    <li>000-000-000</li>
+                    <a href="#"><img src="{{ url_for('static', filename='mail.png') }}" class="mail"></a>
+                    <li>swolah@gmail.com</li>
+                </ul>
+            </div>
+            <div class="services">
+                <div class="footer-heading">Our Services</div>
+                <ul class="footer-list">
+                    <li><a href="#">Manual ></a></li>
+                    <li><a href="#">Instructional Video ></a></li>
+                    <li><a href="#">Into the System ></a></li>
+                </ul>
+            </div>
+            <div class="return-policy">
+                <div class="footer-heading">Return Policy</div>
+                <ul class="footer-list">
+                    <li><a href="#">Refunds</a></li>
+                    <li><a href="#">Returning and Keeping</a></li>
+                    <li><a href="#">Problems</a></li>
+                </ul>
+            </div>
+            <div class="help">
+                <div class="footer-heading">Help</div>
+                <ul class="footer-list">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Enquiry</a></li>
+                    <li><a href="#">Call</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © Swolah. All rights reserved. | Designed by Swolah team.
+        </div>
+    </footer>
+</body>
+</html>

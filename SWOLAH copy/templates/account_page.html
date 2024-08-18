@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Clothes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #3e3e3e;
+        }
+
+        header {
+            background-color: #f7e9d5;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #3e3e3e;
+        }
+
+        main {
+            display: flex;
+        }
+
+        aside {
+            width: 15%;
+            background-color: #ede3d1;
+            padding: 20px;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin: 10px 0;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #3e3e3e;
+        }
+
+        .main-content {
+            width: 85%;
+            padding: 30px;
+            background-color: #CAB09B;
+            text-align: left;
+            
+        }
+
+        .main-content h1 {
+            font-size: 28px;
+            color: #3e3e3e;
+        }
+
+        .main-content p {
+            font-size: 16px;
+            color: #3e3e3e60;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .action-button {
+            width: 100px;
+            margin: 100px;
+            text-align: center;
+        }
+
+        .action-button img {
+            width: 200px;
+            height: 260px;
+            margin-bottom: 10px;
+        }
+
+        .token-balance {
+            position: absolute;
+            top: 100px; /* Position the element 10px from the top of the page */
+            right: 0;  /* Align it to the right of the page */
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+
+        .token-count {
+            top: 50px;
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .token-count img {
+            width: 150px;
+            height: 50px;
+            margin-right: 5px;
+        }
+
+        footer {
+            background-color: #f7e9d5;
+            padding: 20px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+        }
+
+        .social-media {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .footer-links {
+            flex: 3;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .footer-links div {
+            margin: 0 20px;
+        }
+
+        .footer-links h3 {
+            margin-bottom: 10px;
+            color: #3e3e3e;
+        }
+
+        .footer-links p {
+            margin: 5px 0;
+            color: #3e3e3e;
+        }
+
+        .footer-image {
+            text-align: center;
+        }
+
+        .footer-image img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='Vector.png') }}" alt="Logo">
+            </div>
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="search...">
+                    <button type="submit">🔍</button>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">login/signup</a></li>
+                        <li><a href="#">queries</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <aside>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">manage</a></li>
+                <li><a href="#">preferences</a></li>
+                <li><a href="#">orders</a></li>
+                <li><a href="#">help</a></li>
+                <li><a href="#">log out</a></li>
+            </ul>
+        </aside>
+
+        <section class="main-content">
+            <h1>Welcome back, Sabrina Carpenter!</h1>
+            <p>What would you like to do today?</p>
+            <div class="action-buttons">
+                <div class="action-button">
+                    <img src="{{ url_for('static', filename='exchange_clothes_for_tokens.png') }}" alt="Exchange clothes">
+                </div>
+                <div class="action-button">
+                    <img src="{{ url_for('static', filename='purchase_clothes.png') }}" alt="Purchase clothes">
+                </div>
+            </div>
+            <div class="token-balance">
+                <div class="token-count">
+                    <img src="{{ url_for('static', filename='token_balance.png') }}" alt="Token">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <p>@swaish</p>
+                <p>000-000-000</p>
+                <p>swaish@gmail.com</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Our Services</h3>
+                    <p>Manual</p>
+                    <p>Instructional Video</p>
+                    <p>Into the System</p>
+                </div>
+                <div>
+                    <h3>Return Policy</h3>
+                    <p>Refunds</p>
+                    <p>Returning and Keeping</p>
+                    <p>Problems</p>
+                </div>
+                <div>
+                    <h3>Help</h3>
+                    <p>Contact</p>
+                    <p>Enquiry</p>
+                    <p>Call</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-image">
+            <img src="{{ url_for('static', filename='footer_background.png') }}">
+        </div>
+    </footer>
+</body>
+</html>

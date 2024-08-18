@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+
+html, body {
+    height: 100%; /* Ensure the height covers the entire viewport */
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+
+  }
+
+body {
+    background:  linear-gradient(to bottom, #F3EADB, #DFCCB6);/* Change to your desired background color */
+    margin: 0;
+    padding: 0;
+    color: #463227;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    background-color: #3c2f2f;
+    color: white;
+    padding: 10px 0;
+    justify-content: space-between;
+}
+
+.top-banner {
+    background-color: #ffffff;
+    color: #3c2f2f;
+    align-items: center;
+    padding: 01px 150px;
+    font-size: 10px;
+    justify-content: space-between;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    background-color: #3c2f2f;
+}
+.search-bar {
+    flex-grow: 2;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%; /* Make input field fill the search bar */
+    padding: 8px;
+    border: none;
+    background-color: #ffffff;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+
+        .login-box {
+            width: 383px;
+            background-color: rgba(0, 0, 0, 0);;
+            padding: 20px;
+            border: 5px solid #ffffff;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            color: #eccfc3;
+            margin-bottom: 20px;
+        }
+
+        .login-box form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-box input[type="text"],
+        .login-box input[type="password"] {
+            width: 250px; /* Full width within the container */
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            background-color: #f7f6f6;
+            border-radius: 4px;
+        }
+
+        .login-box input[type="submit"] {
+            width: 100px; /* Full width within the container */
+            padding: 10px;
+            background-color: #a07550;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        .login-box input[type="submit"]:hover {
+    background-color: #50382a; /* Darker background on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+}
+
+.login-box input[type="submit"]:active {
+    background-color: #382921; /* Even darker background when clicked */
+    transform: translateY(0); /* Reset position */
+}
+
+        .social-login {
+            margin-top: 20px;
+            color: rgba(158, 116, 92, 0.7);
+            font-size: 14px;
+        }
+
+
+        .social-login a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border: 1px solid #8b6b5d;
+            color: #8b6b5d;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .social-login a:hover {
+            background-color: #9E745C;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #8b6b5d;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #f7f2ea;
+            font-size: 14px;
+        }
+
+        .signup-link {
+            color: rgba(158, 116, 92, 0.7);
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .signup-link a {
+            color: rgba(158, 116, 92, 0.7);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            color: #9E745C;
+        }
+
+
+        .text-slider {
+    width: 100%; /* or any specific width */
+    overflow: hidden; /* Hide text that is outside the container */
+    position: relative;
+    background-color: #f3f3f3; /* Optional: background color for visibility */
+}
+
+.text-track {
+    display: flex;
+    width: 200%; /* This should be set to the total width of all text items */
+    animation: slide 30s linear infinite; /* Increase the duration for slower speed */
+}
+
+.text-track span {
+    display: inline-block;
+    white-space: nowrap; /* Prevent text from wrapping */
+    padding: 0 20px; /* Add padding if needed */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Adjust to the width of the text container */
+    }
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+
+<body>
+    <div class="text-slider">
+        <div class="text-track">
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+            <span>GET TOKENS TO SWAP CLOTHES!</span>
+        </div>
+    </div>
+    
+    
+    <header>
+        <nav class="container">
+            <div class="logo"></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="nav-links">
+                <a href="#">about us</a>
+                <a href="#">login/signup</a>
+                <a href="#">queries</a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container" style= "display: flex; justify-content: center; align-items: center;">
+        <div class="login-box">
+            <img src="{{ url_for('static', filename='login.png') }}">
+            <form>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="submit" value="Enter">
+            </form>
+            <div class="social-login">
+                <p style="color: rgba(158, 116, 92, 0.7); font-family: 'Inter', sans-serif; font-size:14px">or login with</p>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+            </div>
+            
+            <p style="color: rgba(158, 116, 92, 0.7); font-family: 'Inter', sans-serif; font-size: 15px;">
+                Not signed up? Make an <a href="#" style="color: rgba(158, 116, 92, 0.7);"><b>account</b></a>
+            </p>
+        </div>
+    </div>
+        
+    <footer>
+        © Swolah. All rights reserved | Designed by Swolah team
+    </footer>
+</body>
+</html>
