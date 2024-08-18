@@ -189,6 +189,21 @@ nav {
     display: inline-block;
     white-space: nowrap; /* Prevent text from wrapping */
     padding: 0 20px; /* Add padding if needed */
+    
+}
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8b6b5d;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.button-link:hover {
+    background-color: #77532d;
 }
 
 @keyframes slide {
@@ -240,7 +255,7 @@ nav {
             <form>
                 <input type="text" placeholder="Username">
                 <input type="password" placeholder="Password">
-                <input type="submit" value="Enter">
+                <a href="account" class="button-link">Enter</a>
             </form>
             <div class="social-login">
                 <p style="color: rgba(158, 116, 92, 0.7); font-family: 'Inter', sans-serif; font-size:14px">or login with</p>
